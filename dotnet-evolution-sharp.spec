@@ -22,6 +22,7 @@ Pakiet ten dostarcza wi±zania dla .NET do bibliotek z Evolution.
 
 %package devel
 Summary:	Development part of evolution-sharp
+Summary(pl):	Programistyczna czê¶æ evolution-sharp
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
