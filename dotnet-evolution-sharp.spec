@@ -2,7 +2,7 @@ Summary:	Evolution# - .NET language bindings for Evolution
 Summary(pl):	Evolution# - Wi±zania Evolution dla .NET
 Name:		dotnet-evolution-sharp
 Version:	0.3
-Release:	2
+Release:	3
 License:	GPL
 Group:		Development/Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/evolution-sharp/0.3/evolution-sharp-%{version}.tar.bz2
@@ -15,9 +15,10 @@ BuildRequires:	autoconf
 Buildrequires:	automake
 BuildRequires:	evolution-data-server-devel
 BuildRequires:	dotnet-gtk-sharp-devel >= 0.93
+BuildRequires:	pkgconfig
 Requires:	evolution-data-server
 Requires:	dotnet-gtk-sharp
-BuildRequires:	pkgconfig
+ExcludeArch:	alpha
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
