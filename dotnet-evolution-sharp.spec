@@ -15,8 +15,8 @@ BuildRequires:	evolution-data-server-devel >= 1.0.0
 BuildRequires:	pkgconfig
 Requires:	dotnet-gtk-sharp
 Requires:	evolution-data-server
-Obsoletes:	dotnet-evolution
 Provides:	dotnet-evolution
+Obsoletes:	dotnet-evolution
 ExcludeArch:	alpha
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -31,8 +31,8 @@ Summary:	Development part of Evolution#
 Summary(pl):	Programistyczna czê¶æ Evolution#
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Obsoletes:	dotnet-evolution-devel
 Provides:	dotnet-evolution-devel
+Obsoletes:	dotnet-evolution-devel
 
 %description devel
 Tools for developing applications using evolution-sharp.
