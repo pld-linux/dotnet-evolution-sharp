@@ -8,12 +8,15 @@ Group:		Development/Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/evolution-sharp/0.3/evolution-sharp-%{version}.tar.bz2
 # Source0-md5:	3e2a5ee5a17e6d96b2fbf416894d82f3
 Patch0:		%{name}-mint.patch
+Patch1:		%{name}-libebook.patch
 Obsoletes:	dotnet-evolution
 Provides:	dotnet-evolution
 BuildRequires:	autoconf
 Buildrequires:	automake
 BuildRequires:	evolution-data-server-devel
 BuildRequires:	dotnet-gtk-sharp-devel >= 0.93
+Requires:	evolution-data-server
+Requires:	dotnet-gtk-sharp
 BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -41,6 +44,7 @@ evolution-sharp.
 %prep
 %setup -q -n evolution-sharp-%{version}
 %patch0 -p1
+%patch1 -p1
 
 %build
 %{__aclocal}
