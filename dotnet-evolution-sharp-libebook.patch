@@ -1,0 +1,9 @@
+diff -Nuard evolution-sharp-0.3.orig/evolution/evolution-sharp.dll.config.in evolution-sharp-0.3/evolution/evolution-sharp.dll.config.in
+--- evolution-sharp-0.3.orig/evolution/evolution-sharp.dll.config.in	2004-06-02 00:29:15.000000000 +0200
++++ evolution-sharp-0.3/evolution/evolution-sharp.dll.config.in	2004-07-05 21:22:11.037639936 +0200
+@@ -1,4 +1,4 @@
+ <configuration>
+-  <dllmap dll="ebook" target="libebook@LIB_PREFIX@.5@LIB_SUFFIX@"/>
++  <dllmap dll="ebook" target="libebook@LIB_PREFIX@.7@LIB_SUFFIX@"/>
+   <dllmap dll="edataserver" target="libedataserver@LIB_PREFIX@.3@LIB_SUFFIX@"/>
+ </configuration>
