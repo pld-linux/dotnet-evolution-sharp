@@ -1,16 +1,18 @@
 Summary:	Evolution# - .NET language bindings for Evolution
 Summary(pl):	Evolution# - Wi±zania Evolution dla .NET
-Name:		dotnet-evolution
-Version:	0.2
+Name:		dotnet-evolution-sharp
+Version:	0.3
 Release:	1
 License:	GPL
 Group:		Development/Libraries
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{name}/0.2/evolution-sharp-%{version}.tar.bz2
-# Source0-md5:	90ec5b8df09b7303608d725968f5ee64
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/evolution-sharp/0.3/evolution-sharp-%{version}.tar.bz2
+# Source0-md5:	3e2a5ee5a17e6d96b2fbf416894d82f3
+Obsoletes:	dotnet-evolution
+Provides:	dotnet-evolution
 BuildRequires:	autoconf
 Buildrequires:	automake
 BuildRequires:	evolution-data-server-devel
-BuildRequires:	dotnet-gtk >= 0.16-2
+BuildRequires:	dotnet-gtk-sharp >= 0.93
 BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -23,6 +25,8 @@ Pakiet ten dostarcza wi±zania dla .NET do bibliotek z Evolution.
 %package devel
 Summary:	Development part of Evolution#
 Summary(pl):	Programistyczna czê¶æ Evolution#
+Obsoletes:	dotnet-evolution-devel
+Provides:	dotnet-evolution-devel
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -55,9 +59,10 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog MAINTAINERS NEWS README
-%{_libdir}/*.dll
+%{_libdir}/mono/gac/evolution-sharp
 
 %files devel
 %defattr(644,root,root,755)
+%{_libdir}/mono/evolution-sharp
 %{_pkgconfigdir}/*.pc
 %{_datadir}/gapi/*
