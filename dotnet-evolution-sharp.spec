@@ -12,7 +12,7 @@ Provides:	dotnet-evolution
 BuildRequires:	autoconf
 Buildrequires:	automake
 BuildRequires:	evolution-data-server-devel
-BuildRequires:	dotnet-gtk-sharp >= 0.93
+BuildRequires:	dotnet-gtk-sharp-devel >= 0.93
 BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
