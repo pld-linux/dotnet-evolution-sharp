@@ -26,15 +26,6 @@ diff -Nuard evolution-sharp-0.3.orig/configure.in evolution-sharp-0.3/configure.
  AC_PATH_PROG(CSC, mcs, no)
  if test "x$CSC" = "xno"; then
  	AC_MSG_ERROR([Your mono installation doesn't expose mcs])
-@@ -22,6 +38,8 @@
- if test "x$GACUTIL" = "xno"; then
- 	AC_MSG_ERROR([Your mono installation doesn't expose gacutil])
- fi
-+
-+
- if test `uname -s` = "Darwin"; then
-         LIB_PREFIX=
-         LIB_SUFFIX=.dylib
 diff -Nuard evolution-sharp-0.3.orig/evolution-sharp.pc.in evolution-sharp-0.3/evolution-sharp.pc.in
 --- evolution-sharp-0.3.orig/evolution-sharp.pc.in	2004-06-02 02:53:41.000000000 +0200
 +++ evolution-sharp-0.3/evolution-sharp.pc.in	2004-07-05 20:44:59.318698688 +0200
