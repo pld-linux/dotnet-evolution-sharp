@@ -1,23 +1,22 @@
 Summary:	Evolution# - .NET language bindings for Evolution
 Summary(pl):	Evolution# - Wi±zania Evolution dla .NET
 Name:		dotnet-evolution-sharp
-Version:	0.3
-Release:	3
+Version:	0.4
+Release:	1
 License:	GPL
 Group:		Development/Libraries
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/evolution-sharp/0.3/evolution-sharp-%{version}.tar.bz2
-# Source0-md5:	3e2a5ee5a17e6d96b2fbf416894d82f3
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/evolution-sharp/0.4/evolution-sharp-%{version}.tar.bz2
+# Source0-md5:	cc4f968f1d6d9ca81638ecb8cbd884e0
 Patch0:		%{name}-mint.patch
-Patch1:		%{name}-libebook.patch
-Obsoletes:	dotnet-evolution
-Provides:	dotnet-evolution
 BuildRequires:	autoconf
 Buildrequires:	automake
-BuildRequires:	evolution-data-server-devel
-BuildRequires:	dotnet-gtk-sharp-devel >= 0.93
+BuildRequires:	dotnet-gtk-sharp-devel >= 1.0
+BuildRequires:	evolution-data-server-devel >= 1.0.0
 BuildRequires:	pkgconfig
-Requires:	evolution-data-server
 Requires:	dotnet-gtk-sharp
+Requires:	evolution-data-server
+Obsoletes:	dotnet-evolution
+Provides:	dotnet-evolution
 ExcludeArch:	alpha
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -30,10 +29,10 @@ Pakiet ten dostarcza wi±zania dla .NET do bibliotek z Evolution.
 %package devel
 Summary:	Development part of Evolution#
 Summary(pl):	Programistyczna czê¶æ Evolution#
-Obsoletes:	dotnet-evolution-devel
-Provides:	dotnet-evolution-devel
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
+Obsoletes:	dotnet-evolution-devel
+Provides:	dotnet-evolution-devel
 
 %description devel
 Tools for developing applications using evolution-sharp.
@@ -45,7 +44,6 @@ evolution-sharp.
 %prep
 %setup -q -n evolution-sharp-%{version}
 %patch0 -p1
-%patch1 -p1
 
 %build
 %{__aclocal}
