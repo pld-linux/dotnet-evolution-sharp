@@ -1,16 +1,16 @@
-Summary:	.NET language bindings for Evolution
-Summary(pl):	Wi±zania Evolution dla .NET
-Name:		evolution-sharp
+Summary:	Evolution# - .NET language bindings for Evolution
+Summary(pl):	Evolution# - Wi±zania Evolution dla .NET
+Name:		dotnet-evolution
 Version:	0.2
 Release:	1
 License:	GPL
 Group:		Development/Libraries
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{name}/0.2/%{name}-%{version}.tar.bz2
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{name}/0.2/evolution-sharp-%{version}.tar.bz2
 # Source0-md5:	90ec5b8df09b7303608d725968f5ee64
 BuildRequires:	autoconf
 Buildrequires:	automake
 BuildRequires:	evolution-data-server-devel
-BuildRequires:	gtk-sharp-devel >= 0.16-2
+BuildRequires:	dotnet-gtk >= 0.16-2
 BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -21,8 +21,8 @@ This package provides bindings for .NET to Evolution libraries.
 Pakiet ten dostarcza wi±zania dla .NET do bibliotek z Evolution.
 
 %package devel
-Summary:	Development part of evolution-sharp
-Summary(pl):	Programistyczna czê¶æ evolution-sharp
+Summary:	Development part of Evolution#
+Summary(pl):	Programistyczna czê¶æ Evolution#
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -34,7 +34,7 @@ Narzêdzia potrzebne przy tworzeniu aplikacji korzystaj±cych z
 evolution-sharp.
 
 %prep
-%setup -q
+%setup -q -n evolution-sharp-%{version}
 
 %build
 %{__aclocal}
