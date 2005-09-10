@@ -1,24 +1,26 @@
+#
+%include        /usr/lib/rpm/macros.mono
+#
 Summary:	Evolution# - .NET language bindings for Evolution
 Summary(pl):	Evolution# - Wi±zania Evolution dla .NET
 Name:		dotnet-evolution-sharp
-Version:	0.6
+Version:	0.10.1
 Release:	1
 License:	GPL
 Group:		Development/Libraries
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/evolution-sharp/0.6/evolution-sharp-%{version}.tar.bz2
-# Source0-md5:	b99e0d8ed2ba352802649c213b5ab32e
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/evolution-sharp/0.10/evolution-sharp-%{version}.tar.bz2
+# Source0-md5:	228856d1eb074b4c73e8ca8380509fc7
 Patch0:		%{name}-mint.patch
 BuildRequires:	autoconf
 BuildRequires:	automake
-# just gtk-sharp
-BuildRequires:	dotnet-gtk-sharp-devel >= 1.0
-BuildRequires:	evolution-data-server-devel >= 1.2
-# (optionally) gtkhtml-devel >= 3.0 < 3.2 (it tries to use 3.0 or 3.1, but not 3.6)
-BuildRequires:	mono-csharp >= 0.91
+BuildRequires:	dotnet-gtk-sharp2-devel >= 1.9.5
+BuildRequires:	evolution-data-server-devel >= 1.4
+BuildRequires:	evolution-devel >= 2.4.0
+BuildRequires:	mono-csharp >= 1.0.0
 BuildRequires:	pkgconfig
-Requires:	dotnet-gtk-sharp >= 1.0
-Requires:	evolution-data-server >= 1.2
-Requires:	mono >= 0.91
+Requires:	dotnet-gtk-sharp2 >= 1.9.5
+Requires:	evolution-data-server >= 1.4
+Requires:	mono >= 1.0.0
 Provides:	dotnet-evolution
 Obsoletes:	dotnet-evolution
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -45,6 +47,18 @@ Tools for developing applications using evolution-sharp.
 Narzêdzia potrzebne przy tworzeniu aplikacji korzystaj±cych z
 evolution-sharp.
 
+%package static
+Summary:        Static evolution-sharp libraries
+Summary(pl):    Biblioteki statyczne evolution-sharp
+Group:          Development/Libraries
+Requires:       %{name}-devel = %{version}-%{release}
+
+%description static
+Static evolution-sharp libraries.
+
+%description static -l pl
+Biblioteki statyczne evolution-sharp.
+
 %prep
 %setup -q -n evolution-sharp-%{version}
 %patch0 -p1
@@ -68,10 +82,16 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog MAINTAINERS NEWS README
+%attr(755,root,root) %{_libdir}/libevolutionglue.so
+%{_libdir}/libevolutionglue.la
 %{_libdir}/mono/gac/evolution-sharp
 
 %files devel
 %defattr(644,root,root,755)
 %{_libdir}/mono/evolution-sharp
 %{_pkgconfigdir}/*.pc
-%{_datadir}/gapi/*
+%{_datadir}/gapi-2.0/*
+
+%files static
+%defattr(644,root,root,755)
+%{_libdir}/libevolutionglue.a
