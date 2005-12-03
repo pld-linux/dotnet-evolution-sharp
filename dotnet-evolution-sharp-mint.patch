@@ -24,12 +24,3 @@
  AC_PATH_PROG(CSC, mcs, no)
  if test "x$CSC" = "xno"; then
  	AC_MSG_ERROR([Your mono installation doesn't expose mcs])
---- evolution-sharp-0.9.1/evolution-sharp.pc.in.orig	2005-08-22 19:48:40.000000000 +0200
-+++ evolution-sharp-0.9.1/evolution-sharp.pc.in	2005-08-22 19:49:15.000000000 +0200
-@@ -1,5 +1,5 @@
- prefix=@prefix@
--libdir=${prefix}/lib
-+libdir=@libdir@
- 
- Name: Evolution#
- Description: Evolution# - Evolution .NET Binding
