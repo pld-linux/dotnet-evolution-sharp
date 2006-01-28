@@ -20,7 +20,6 @@ BuildRequires:	libtool
 BuildRequires:	mono-csharp >= 1.1.7
 BuildRequires:	pkgconfig
 Requires:	dotnet-gtk-sharp2 >= 1.9.5
-Requires:	evolution-data-server >= 1.4
 Requires:	mono >= 1.1.7
 Provides:	dotnet-evolution
 Obsoletes:	dotnet-evolution
@@ -38,7 +37,7 @@ Summary:	Development part of Evolution#
 Summary(pl):	Programistyczna czê¶æ Evolution#
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	dotnet-gtk-sharp-devel >= 1.0
+Requires:	dotnet-gtk-sharp2-devel >= 1.0
 Provides:	dotnet-evolution-devel
 Obsoletes:	dotnet-evolution-devel
 
