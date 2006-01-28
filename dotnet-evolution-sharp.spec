@@ -10,6 +10,7 @@ Source0:	http://ftp.gnome.org/pub/GNOME/sources/evolution-sharp/0.10/evolution-s
 # Source0-md5:	66957006f02706490d244d4f01ec542d
 Patch0:		%{name}-mint.patch
 Patch1:		%{name}-monodir.patch
+Patch2:		%{name}-evo26.patch
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	dotnet-gtk-sharp2-devel >= 1.9.5
@@ -64,6 +65,7 @@ Biblioteki statyczne evolution-sharp.
 %setup -q -n evolution-sharp-%{version}
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
 
 %build
 %{__libtoolize}
