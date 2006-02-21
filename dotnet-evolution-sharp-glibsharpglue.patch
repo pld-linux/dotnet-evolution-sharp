@@ -1,0 +1,15 @@
+--- evolution-sharp-0.10.2/evolution/src/GLibUtil.cs.wiget	2005-09-12 22:49:54.000000000 +0200
++++ evolution-sharp-0.10.2/evolution/src/GLibUtil.cs	2006-02-21 17:05:51.000000000 +0100
+@@ -13,10 +13,10 @@
+ 		[DllImport("libglib-2.0.so.0")]
+ 		public static extern int g_slist_length (IntPtr slist);
+ 		
+-                [DllImport("glibsharpglue")]
++                [DllImport("glibsharpglue-2")]
+                 public static extern IntPtr gtksharp_slist_get_data (IntPtr slist);
+ 
+-		[DllImport("glibsharpglue")]
++		[DllImport("glibsharpglue-2")]
+ 		public static extern  IntPtr gtksharp_slist_get_next (IntPtr slist);
+  
+ 		[DllImport("libglib-2.0.so.0")]
