@@ -6,7 +6,7 @@ diff -aurN evolution-sharp-0.10.2.orig/configure.in evolution-sharp-0.10.2/confi
  if test "x$eds13" = "xyes"; then
  	EDS_VERSION=-1.2
 -	EDS_SOVERSION=4
-+	EDS_SOVERSION=6
++	EDS_SOVERSION=7
  	EBOOK_SOVERSION=5
  	ECAL_SOVERSION=3
  else
