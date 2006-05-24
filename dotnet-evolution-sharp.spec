@@ -1,26 +1,27 @@
-#
 %include        /usr/lib/rpm/macros.mono
-#
 Summary:	Evolution# - .NET language bindings for Evolution
 Summary(pl):	Evolution# - Wi±zania Evolution dla .NET
 Name:		dotnet-evolution-sharp
-Version:	0.10.2
-Release:	2
+Version:	0.11.1
+Release:	1
 License:	GPL
 Group:		Development/Libraries
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/evolution-sharp/0.10/evolution-sharp-%{version}.tar.bz2
-# Source0-md5:	66957006f02706490d244d4f01ec542d
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/evolution-sharp/0.11/evolution-sharp-%{version}.tar.bz2
+# Source0-md5:	d1bf31c7c9dda9ba012e169981626cce
 Patch0:		%{name}-mint.patch
+Patch1:		%{name}-monodir.patch
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	dotnet-gtk-sharp2-devel >= 1.9.5
-BuildRequires:	evolution-data-server-devel >= 1.4
-BuildRequires:	evolution-devel >= 2.4.0
-BuildRequires:	mono-csharp >= 1.0.0
+BuildRequires:	evolution-data-server-devel >= 1.6.1
+BuildRequires:	evolution-devel >= 2.6.1
+BuildRequires:	libtool
+BuildRequires:	mono-csharp >= 1.1.7
 BuildRequires:	pkgconfig
+Requires:	evolution-data-server-libs >= 1.6.1
+Requires:	evolution-libs >= 2.6.1
 Requires:	dotnet-gtk-sharp2 >= 1.9.5
-Requires:	evolution-data-server >= 1.4
-Requires:	mono >= 1.0.0
+Requires:	mono >= 1.1.7
 Provides:	dotnet-evolution
 Obsoletes:	dotnet-evolution
 ExcludeArch:	i386 alpha sparc sparc64
@@ -37,7 +38,7 @@ Summary:	Development part of Evolution#
 Summary(pl):	Programistyczna czê¶æ Evolution#
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	dotnet-gtk-sharp-devel >= 1.0
+Requires:	dotnet-gtk-sharp2-devel >= 1.0
 Provides:	dotnet-evolution-devel
 Obsoletes:	dotnet-evolution-devel
 
@@ -63,10 +64,13 @@ Biblioteki statyczne evolution-sharp.
 %prep
 %setup -q -n evolution-sharp-%{version}
 %patch0 -p1
+%patch1 -p1
 
 %build
+%{__libtoolize}
 %{__aclocal}
 %{__autoconf}
+%{__autoheader}
 %{__automake}
 %configure
 %{__make}
@@ -85,13 +89,13 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS ChangeLog MAINTAINERS NEWS README
 %attr(755,root,root) %{_libdir}/libevolutionglue.so
 %{_libdir}/libevolutionglue.la
-%{_libdir}/mono/gac/evolution-sharp
+%{_prefix}/lib/mono/gac/evolution-sharp
 
 %files devel
 %defattr(644,root,root,755)
-%{_libdir}/mono/evolution-sharp
-%{_pkgconfigdir}/*.pc
+%{_prefix}/lib/mono/evolution-sharp
 %{_datadir}/gapi-2.0/*
+%{_pkgconfigdir}/*.pc
 
 %files static
 %defattr(644,root,root,755)
