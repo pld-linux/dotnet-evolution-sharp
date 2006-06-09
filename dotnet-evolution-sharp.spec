@@ -50,10 +50,10 @@ Narzêdzia potrzebne przy tworzeniu aplikacji korzystaj±cych z
 evolution-sharp.
 
 %package static
-Summary:        Static evolution-sharp libraries
-Summary(pl):    Biblioteki statyczne evolution-sharp
-Group:          Development/Libraries
-Requires:       %{name}-devel = %{version}-%{release}
+Summary:	Static evolution-sharp libraries
+Summary(pl):	Biblioteki statyczne evolution-sharp
+Group:		Development/Libraries
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static evolution-sharp libraries.
