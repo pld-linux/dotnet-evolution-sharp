@@ -20,7 +20,7 @@ diff -aurN evolution-sharp-0.11.1.orig/configure.in evolution-sharp-0.11.1/confi
 +if test "x$edsver" = "x1.8"; then
 +	EDS_VERSION=-1.2
 +	EDS_SOVERSION=7
-+	EBOOK_SOVERSION=5
++	EBOOK_SOVERSION=9
 +	ECAL_SOVERSION=3
 +fi
 +
