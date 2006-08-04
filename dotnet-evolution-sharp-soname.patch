@@ -1,0 +1,12 @@
+diff -aurN evolution-sharp-0.11.1.orig/configure.in evolution-sharp-0.11.1/configure.in
+--- evolution-sharp-0.11.1.orig/configure.in	2006-04-29 18:44:50.000000000 +0200
++++ evolution-sharp-0.11.1/configure.in	2006-08-04 21:21:58.826035496 +0200
+@@ -38,7 +38,7 @@
+ 	EDS_VERSION=-1.2
+ 	EDS_SOVERSION=7
+ 	EBOOK_SOVERSION=5
+-	ECAL_SOVERSION=3
++	ECAL_SOVERSION=6
+ fi
+ 
+ AC_SUBST(EDS_VERSION)
