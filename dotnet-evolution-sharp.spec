@@ -1,9 +1,11 @@
+#
 %include        /usr/lib/rpm/macros.mono
+#
 Summary:	Evolution# - .NET language bindings for Evolution
 Summary(pl):	Evolution# - Wi±zania Evolution dla .NET
 Name:		dotnet-evolution-sharp
 Version:	0.11.1
-Release:	4
+Release:	5
 License:	GPL
 Group:		Development/Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/evolution-sharp/0.11/evolution-sharp-%{version}.tar.bz2
@@ -13,19 +15,19 @@ Patch1:		%{name}-monodir.patch
 Patch2:		%{name}-evo28.patch
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	dotnet-gtk-sharp2-devel >= 2.8.3
-BuildRequires:	evolution-data-server-devel >= 1.7.90.1
-BuildRequires:	evolution-devel >= 2.7.90
+BuildRequires:	dotnet-gtk-sharp2-devel >= 2.9.0
+BuildRequires:	evolution-data-server-devel >= 1.7.91
+BuildRequires:	evolution-devel >= 2.7.91
 BuildRequires:	libtool
 BuildRequires:	mono-csharp >= 1.1.16.1
 BuildRequires:	pkgconfig
-Requires:	evolution-data-server-libs >= 1.7.90.1
-Requires:	evolution-libs >= 2.7.90
-Requires:	dotnet-gtk-sharp2 >= 2.8.3
+Requires:	evolution-data-server-libs >= 1.7.91
+Requires:	evolution-libs >= 2.7.91
 Requires:	mono >= 1.1.16.1
 Provides:	dotnet-evolution
 Obsoletes:	dotnet-evolution
-ExcludeArch:	i386 alpha sparc sparc64
+ExclusiveArch:	%{ix86} %{x8664} arm hppa ia64 ppc s390 s390x sparc sparcv9 sparc64
+ExcludeArch:	i386
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -39,7 +41,7 @@ Summary:	Development part of Evolution#
 Summary(pl):	Programistyczna czê¶æ Evolution#
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	dotnet-gtk-sharp2-devel >= 2.8.3
+Requires:	dotnet-gtk-sharp2-devel >= 2.9.0
 Provides:	dotnet-evolution-devel
 Obsoletes:	dotnet-evolution-devel
 
