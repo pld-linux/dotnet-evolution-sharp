@@ -21,7 +21,7 @@ diff -aurN evolution-sharp-0.11.1.orig/configure.in evolution-sharp-0.11.1/confi
 +	EDS_VERSION=-1.2
 +	EDS_SOVERSION=7
 +	EBOOK_SOVERSION=9
-+	ECAL_SOVERSION=3
++	ECAL_SOVERSION=7
 +fi
 +
  AC_SUBST(EDS_VERSION)
