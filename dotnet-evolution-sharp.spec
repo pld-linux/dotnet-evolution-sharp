@@ -2,7 +2,7 @@
 %include        /usr/lib/rpm/macros.mono
 #
 Summary:	Evolution# - .NET language bindings for Evolution
-Summary(pl):	Evolution# - Wi±zania Evolution dla .NET
+Summary(pl.UTF-8):   Evolution# - WiÄ…zania Evolution dla .NET
 Name:		dotnet-evolution-sharp
 Version:	0.11.1
 Release:	5
@@ -33,12 +33,12 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 This package provides bindings for .NET to Evolution libraries.
 
-%description -l pl
-Pakiet ten dostarcza wi±zania dla .NET do bibliotek z Evolution.
+%description -l pl.UTF-8
+Pakiet ten dostarcza wiÄ…zania dla .NET do bibliotek z Evolution.
 
 %package devel
 Summary:	Development part of Evolution#
-Summary(pl):	Programistyczna czê¶æ Evolution#
+Summary(pl.UTF-8):   Programistyczna czÄ™Å›Ä‡ Evolution#
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	dotnet-gtk-sharp2-devel >= 2.9.0
@@ -48,20 +48,20 @@ Obsoletes:	dotnet-evolution-devel
 %description devel
 Tools for developing applications using evolution-sharp.
 
-%description devel -l pl
-Narzêdzia potrzebne przy tworzeniu aplikacji korzystaj±cych z
+%description devel -l pl.UTF-8
+NarzÄ™dzia potrzebne przy tworzeniu aplikacji korzystajÄ…cych z
 evolution-sharp.
 
 %package static
 Summary:	Static evolution-sharp libraries
-Summary(pl):	Biblioteki statyczne evolution-sharp
+Summary(pl.UTF-8):   Biblioteki statyczne evolution-sharp
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static evolution-sharp libraries.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Biblioteki statyczne evolution-sharp.
 
 %prep
