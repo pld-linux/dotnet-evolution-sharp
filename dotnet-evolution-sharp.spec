@@ -2,7 +2,7 @@
 %include        /usr/lib/rpm/macros.mono
 #
 Summary:	Evolution# - .NET language bindings for Evolution
-Summary(pl.UTF-8):   Evolution# - Wiązania Evolution dla .NET
+Summary(pl.UTF-8):	Evolution# - Wiązania Evolution dla .NET
 Name:		dotnet-evolution-sharp
 Version:	0.11.1
 Release:	5
@@ -38,7 +38,7 @@ Pakiet ten dostarcza wiązania dla .NET do bibliotek z Evolution.
 
 %package devel
 Summary:	Development part of Evolution#
-Summary(pl.UTF-8):   Programistyczna część Evolution#
+Summary(pl.UTF-8):	Programistyczna część Evolution#
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	dotnet-gtk-sharp2-devel >= 2.9.0
@@ -54,7 +54,7 @@ evolution-sharp.
 
 %package static
 Summary:	Static evolution-sharp libraries
-Summary(pl.UTF-8):   Biblioteki statyczne evolution-sharp
+Summary(pl.UTF-8):	Biblioteki statyczne evolution-sharp
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
