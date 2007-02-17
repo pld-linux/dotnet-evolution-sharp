@@ -26,7 +26,6 @@ Requires:	evolution-libs >= 2.7.91
 Requires:	mono >= 1.1.16.1
 Provides:	dotnet-evolution
 Obsoletes:	dotnet-evolution
-ExclusiveArch:	%{ix86} %{x8664} arm hppa ia64 ppc s390 s390x sparc sparcv9 sparc64
 ExcludeArch:	i386
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
