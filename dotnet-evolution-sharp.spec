@@ -4,21 +4,21 @@
 Summary:	Evolution# - .NET language bindings for Evolution
 Summary(pl.UTF-8):	Evolution# - Wiązania Evolution dla .NET
 Name:		dotnet-evolution-sharp
-Version:	0.12.2
-Release:	2
+Version:	0.12.3
+Release:	1
 License:	GPL
 Group:		Development/Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/evolution-sharp/0.12/evolution-sharp-%{version}.tar.bz2
-# Source0-md5:	944df17a5ff06d3a254ab312c6470f17
+# Source0-md5:	bc4d7d1ac9c5eddb0fcd9f424f67e4a3
 Patch0:		%{name}-mint.patch
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	dotnet-gtk-sharp2-devel >= 2.10.0
-BuildRequires:	evolution-data-server-devel >= 1.8.3
+BuildRequires:	evolution-data-server-devel >= 1.10.1
 BuildRequires:	libtool
 BuildRequires:	mono-csharp >= 1.1.16.1
 BuildRequires:	pkgconfig
-Requires:	evolution-data-server-libs >= 1.8.3
+Requires:	evolution-data-server-libs >= 1.10.1
 Requires:	mono >= 1.1.16.1
 Provides:	dotnet-evolution
 Obsoletes:	dotnet-evolution
