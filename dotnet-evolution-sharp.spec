@@ -86,11 +86,11 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS ChangeLog MAINTAINERS NEWS README
 %attr(755,root,root) %{_libdir}/libevolutionglue.so
 %{_libdir}/libevolutionglue.la
-%{_libdir}/mono/gac/evolution-sharp
+%{_prefix}/lib/mono/gac/evolution-sharp
 
 %files devel
 %defattr(644,root,root,755)
-%{_libdir}/mono/evolution-sharp
+%{_prefix}/lib/mono/evolution-sharp
 %{_datadir}/gapi-2.0/*
 %{_pkgconfigdir}/*.pc
 
