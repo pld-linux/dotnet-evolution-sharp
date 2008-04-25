@@ -5,7 +5,7 @@ Summary:	Evolution# - .NET language bindings for Evolution
 Summary(pl.UTF-8):	Evolution# - Wiązania Evolution dla .NET
 Name:		dotnet-evolution-sharp
 Version:	0.16.0
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/evolution-sharp/0.16/evolution-sharp-%{version}.tar.bz2
@@ -86,11 +86,11 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS ChangeLog MAINTAINERS NEWS README
 %attr(755,root,root) %{_libdir}/libevolutionglue.so
 %{_libdir}/libevolutionglue.la
-%{_prefix}/lib/mono/gac/evolution-sharp
+%{_libdir}/mono/gac/evolution-sharp
 
 %files devel
 %defattr(644,root,root,755)
-%{_prefix}/lib/mono/evolution-sharp
+%{_libdir}/mono/evolution-sharp
 %{_datadir}/gapi-2.0/*
 %{_pkgconfigdir}/*.pc
 
