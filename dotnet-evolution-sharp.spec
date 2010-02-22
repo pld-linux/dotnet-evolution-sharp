@@ -11,6 +11,7 @@ Group:		Development/Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/evolution-sharp/0.20/evolution-sharp-%{version}.tar.bz2
 # Source0-md5:	ca4f75a795aa2af36c4573971c0534f7
 Patch0:		%{name}-mint.patch
+Patch1:		evolution-data-server-228.patch
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	dotnet-gtk-sharp2-devel >= 2.10.2
@@ -62,6 +63,7 @@ Biblioteki statyczne evolution-sharp.
 %prep
 %setup -q -n evolution-sharp-%{version}
 %patch0 -p1
+%patch1 -p1
 
 %build
 %{__libtoolize}
