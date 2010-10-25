@@ -5,7 +5,7 @@ Summary:	Evolution# - .NET language bindings for Evolution
 Summary(pl.UTF-8):	Evolution# - Wiązania Evolution dla .NET
 Name:		dotnet-evolution-sharp
 Version:	0.21.1
-Release:	0.1
+Release:	1
 License:	GPL
 Group:		Development/Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/evolution-sharp/0.21/evolution-sharp-%{version}.tar.bz2
