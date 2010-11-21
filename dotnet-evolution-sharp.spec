@@ -5,7 +5,7 @@ Summary:	Evolution# - .NET language bindings for Evolution
 Summary(pl.UTF-8):	Evolution# - Wiązania Evolution dla .NET
 Name:		dotnet-evolution-sharp
 Version:	0.20.0
-Release:	3
+Release:	4
 Epoch:		1
 License:	GPL
 Group:		Development/Libraries
@@ -39,7 +39,7 @@ Pakiet ten dostarcza wiązania dla .NET do bibliotek z Evolution.
 Summary:	Development part of Evolution#
 Summary(pl.UTF-8):	Programistyczna część Evolution#
 Group:		Development/Libraries
-Requires:	%{name} = %{version}-%{release}
+Requires:	%{name} = %{epoch}:%{version}-%{release}
 Requires:	dotnet-gtk-sharp2-devel >= 2.10.2
 Provides:	dotnet-evolution-devel
 Obsoletes:	dotnet-evolution-devel
@@ -55,7 +55,7 @@ evolution-sharp.
 Summary:	Static evolution-sharp libraries
 Summary(pl.UTF-8):	Biblioteki statyczne evolution-sharp
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}-%{release}
+Requires:	%{name}-devel = %{epoch}:%{version}-%{release}
 
 %description static
 Static evolution-sharp libraries.
