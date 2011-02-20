@@ -5,7 +5,7 @@ Summary:	Evolution# - .NET language bindings for Evolution
 Summary(pl.UTF-8):	Evolution# - Wiązania Evolution dla .NET
 Name:		dotnet-evolution-sharp
 Version:	0.20.0
-Release:	4
+Release:	5
 Epoch:		1
 License:	GPL
 Group:		Development/Libraries
