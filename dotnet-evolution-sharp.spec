@@ -1,5 +1,4 @@
 #
-%include        /usr/lib/rpm/macros.mono
 #
 Summary:	Evolution# - .NET language bindings for Evolution
 Summary(pl.UTF-8):	Evolution# - Wiązania Evolution dla .NET
